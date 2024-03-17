@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://ola8kq2lmdkk"]
+
+[ext_resource type="Script" path="res://Example/Scripts/View1.cs" id="1_aq1jc"]
+
+[node name="View1" type="Control" node_paths=PackedStringArray("_text")]
+auto_translate_mode = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 368.0
+offset_bottom = 392.0
+script = ExtResource("1_aq1jc")
+_text = NodePath("Label")
+
+[node name="Label" type="Label" parent="."]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Lorem Ipsum Dolor Sit Amet"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbcjjjwlw0l0c"]
+
+[ext_resource type="Script" path="res://Example/Scripts/Main_PrefabStyle.cs" id="1_lawoe"]
+[ext_resource type="PackedScene" uid="uid://b0c1ce3dfacm0" path="res://Example/Scene/View0.tscn" id="2_da3jk"]
+[ext_resource type="PackedScene" uid="uid://ola8kq2lmdkk" path="res://Example/Scene/View1.tscn" id="3_r4rrw"]
+[ext_resource type="PackedScene" uid="uid://bcgrfrr3hks5l" path="res://Example/Scene/View2.tscn" id="4_g1ysb"]
+
+[node name="Main_ReferenceStyle" type="Panel" node_paths=PackedStringArray("_container", "_tab0", "_tab1", "_tab2")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lawoe")
+_container = NodePath("Control")
+_tab0 = NodePath("HBoxContainer/CheckButton")
+_tab1 = NodePath("HBoxContainer/CheckButton2")
+_tab2 = NodePath("HBoxContainer/CheckButton3")
+_view0 = ExtResource("2_da3jk")
+_view1 = ExtResource("3_r4rrw")
+_view2 = ExtResource("4_g1ysb")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 128.0
+offset_right = 832.0
+offset_bottom = 168.0
+alignment = 1
+
+[node name="Label2" type="Label" parent="HBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "<< [Q]"
+
+[node name="CheckButton" type="CheckButton" parent="HBoxContainer"]
+layout_mode = 2
+focus_mode = 1
+text = "View 1"
+
+[node name="CheckButton2" type="CheckButton" parent="HBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+focus_mode = 1
+text = "View2"
+
+[node name="CheckButton3" type="CheckButton" parent="HBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+focus_mode = 1
+text = "View3"
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "[E] >>"
+
+[node name="Control" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 168.0
+offset_right = 832.0
+offset_bottom = 576.0

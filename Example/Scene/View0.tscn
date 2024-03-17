@@ -1,0 +1,117 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0c1ce3dfacm0"]
+
+[ext_resource type="Script" path="res://Example/Scripts/View0.cs" id="1_6rcra"]
+
+[node name="View0" type="Control" node_paths=PackedStringArray("_focus")]
+auto_translate_mode = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 368.0
+offset_bottom = 392.0
+script = ExtResource("1_6rcra")
+_focus = NodePath("VBoxContainer/OptionButton")
+
+[node name="VBoxContainer" type="GridContainer" parent="."]
+auto_translate_mode = 1
+layout_mode = 0
+offset_right = 352.0
+offset_bottom = 376.0
+columns = 2
+
+[node name="Control2" type="Control" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control3" type="Control" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Option 1"
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+selected = 0
+item_count = 4
+popup/item_0/text = "A"
+popup/item_0/id = 0
+popup/item_1/text = "B"
+popup/item_1/id = 1
+popup/item_2/text = "C"
+popup/item_2/id = 2
+popup/item_3/text = "D"
+popup/item_3/id = 3
+
+[node name="Label6" type="Label" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Option 2"
+
+[node name="OptionButton2" type="OptionButton" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+selected = 0
+item_count = 4
+popup/item_0/text = "E"
+popup/item_0/id = 0
+popup/item_1/text = "F"
+popup/item_1/id = 1
+popup/item_2/text = "G"
+popup/item_2/id = 2
+popup/item_3/text = "H"
+popup/item_3/id = 3
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Slider 1"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+step = 20.0
+tick_count = 20
+ticks_on_borders = true
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Slider 2"
+
+[node name="HSlider2" type="HSlider" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+step = 20.0
+tick_count = 20
+ticks_on_borders = true
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Check 1"
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Check 2"
+
+[node name="CheckBox2" type="CheckBox" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_vertical = 3

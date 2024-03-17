@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcgrfrr3hks5l"]
+
+[ext_resource type="Script" path="res://Example/Scripts/View2.cs" id="1_tf253"]
+
+[node name="View2" type="Control" node_paths=PackedStringArray("_text", "_button")]
+auto_translate_mode = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 368.0
+offset_bottom = 392.0
+script = ExtResource("1_tf253")
+_text = NodePath("VBoxContainer/Label")
+_button = NodePath("VBoxContainer/Button")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_right = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Lorem Ipsum Dolor Sit Amet"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "Click Me!"

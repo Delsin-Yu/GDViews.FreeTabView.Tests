@@ -1,0 +1,98 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1mctn75c7f6g"]
+
+[ext_resource type="Script" path="res://Example/Scripts/Main_ReferenceStyle.cs" id="1_j6l85"]
+[ext_resource type="PackedScene" uid="uid://b0c1ce3dfacm0" path="res://Example/Scene/View0.tscn" id="2_b8sgv"]
+[ext_resource type="PackedScene" uid="uid://ola8kq2lmdkk" path="res://Example/Scene/View1.tscn" id="3_qx74v"]
+[ext_resource type="PackedScene" uid="uid://bcgrfrr3hks5l" path="res://Example/Scene/View2.tscn" id="4_l1kx4"]
+
+[node name="Main_ReferenceStyle" type="Panel" node_paths=PackedStringArray("_tab0", "_tab1", "_tab2", "_view0", "_view1", "_view2")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j6l85")
+_tab0 = NodePath("CheckButton")
+_tab1 = NodePath("CheckButton2")
+_tab2 = NodePath("CheckButton3")
+_view0 = NodePath("Control/View0")
+_view1 = NodePath("Control/View1")
+_view2 = NodePath("Control/View2")
+
+[node name="Label2" type="Label" parent="."]
+auto_translate_mode = 1
+layout_mode = 2
+offset_left = 296.0
+offset_top = 56.0
+offset_right = 342.0
+offset_bottom = 79.0
+text = "<< [Q]"
+
+[node name="CheckButton" type="CheckButton" parent="."]
+layout_mode = 2
+offset_left = 376.0
+offset_top = 168.0
+offset_right = 475.0
+offset_bottom = 208.0
+focus_mode = 1
+text = "View 1"
+
+[node name="CheckButton2" type="CheckButton" parent="."]
+auto_translate_mode = 1
+layout_mode = 2
+offset_left = 568.0
+offset_top = 24.0
+offset_right = 662.0
+offset_bottom = 64.0
+focus_mode = 1
+text = "View2"
+
+[node name="CheckButton3" type="CheckButton" parent="."]
+auto_translate_mode = 1
+layout_mode = 2
+offset_left = 680.0
+offset_top = 144.0
+offset_right = 774.0
+offset_bottom = 184.0
+focus_mode = 1
+text = "View3"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 912.0
+offset_top = 240.0
+offset_right = 954.0
+offset_bottom = 263.0
+text = "[E] >>"
+
+[node name="Control" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 168.0
+offset_right = 832.0
+offset_bottom = 576.0
+
+[node name="View0" parent="Control" node_paths=PackedStringArray("_focus") instance=ExtResource("2_b8sgv")]
+visible = false
+offset_left = 240.0
+offset_top = 168.0
+offset_right = 592.0
+offset_bottom = 544.0
+_focus = NodePath("VBoxContainer/OptionButton")
+
+[node name="View1" parent="Control" node_paths=PackedStringArray("_text") instance=ExtResource("3_qx74v")]
+visible = false
+offset_left = -424.0
+offset_top = 8.0
+offset_right = -72.0
+offset_bottom = 384.0
+_text = NodePath("Label")
+
+[node name="View2" parent="Control" node_paths=PackedStringArray("_text", "_button") instance=ExtResource("4_l1kx4")]
+visible = false
+offset_left = -216.0
+offset_top = 112.0
+offset_right = 136.0
+offset_bottom = 488.0
+_text = NodePath("VBoxContainer/Label")
+_button = NodePath("VBoxContainer/Button")

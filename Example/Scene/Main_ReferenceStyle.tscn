@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvkyhvs3mxaxg"]
+
+[ext_resource type="Script" path="res://Example/Scripts/Main_ReferenceStyle.cs" id="1_m41k3"]
+[ext_resource type="PackedScene" uid="uid://b0c1ce3dfacm0" path="res://Example/Scene/View0.tscn" id="2_nd3s8"]
+[ext_resource type="PackedScene" uid="uid://ola8kq2lmdkk" path="res://Example/Scene/View1.tscn" id="3_55i75"]
+[ext_resource type="PackedScene" uid="uid://bcgrfrr3hks5l" path="res://Example/Scene/View2.tscn" id="4_dbjfu"]
+
+[node name="Main_ReferenceStyle" type="Panel" node_paths=PackedStringArray("_tab0", "_tab1", "_tab2", "_view0", "_view1", "_view2")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m41k3")
+_tab0 = NodePath("HBoxContainer/CheckButton")
+_tab1 = NodePath("HBoxContainer/CheckButton2")
+_tab2 = NodePath("HBoxContainer/CheckButton3")
+_view0 = NodePath("Control/View0")
+_view1 = NodePath("Control/View1")
+_view2 = NodePath("Control/View2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 128.0
+offset_right = 832.0
+offset_bottom = 168.0
+alignment = 1
+
+[node name="Label2" type="Label" parent="HBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "<< [Q]"
+
+[node name="CheckButton" type="CheckButton" parent="HBoxContainer"]
+layout_mode = 2
+focus_mode = 1
+text = "View 1"
+
+[node name="CheckButton2" type="CheckButton" parent="HBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+focus_mode = 1
+text = "View2"
+
+[node name="CheckButton3" type="CheckButton" parent="HBoxContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+focus_mode = 1
+text = "View3"
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "[E] >>"
+
+[node name="Control" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 168.0
+offset_right = 832.0
+offset_bottom = 576.0
+
+[node name="View0" parent="Control" node_paths=PackedStringArray("_focus") instance=ExtResource("2_nd3s8")]
+visible = false
+_focus = NodePath("VBoxContainer/OptionButton")
+
+[node name="View1" parent="Control" node_paths=PackedStringArray("_text") instance=ExtResource("3_55i75")]
+visible = false
+_text = NodePath("Label")
+
+[node name="View2" parent="Control" node_paths=PackedStringArray("_text", "_button") instance=ExtResource("4_dbjfu")]
+visible = false
+_text = NodePath("VBoxContainer/Label")
+_button = NodePath("VBoxContainer/Button")
