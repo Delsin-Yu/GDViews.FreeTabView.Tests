@@ -1,16 +1,14 @@
-using Godot;
-using GodotViews.ViewTweeners;
+﻿namespace GodotViews.Example.ReadmeExample;
 
-namespace GodotViews.Example;
+using Godot;
+using GodotViews;
 
 /// <summary>
 /// Attach this script to a <see cref="Control"/> to make it a ViewItem.
 /// </summary>
-public partial class View1 : FreeTabViewItem
+public partial class MyViewItem : FreeTabViewItem
 {
     [Export] private Label _text;
-
-    protected override void _OnViewItemInitialize() => ViewItemTweener = new FadeViewItemTweener();
 
     public override void _Process(double delta)
     {

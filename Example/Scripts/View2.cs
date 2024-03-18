@@ -1,4 +1,5 @@
 using Godot;
+using GodotViews.ViewTweeners;
 
 namespace GodotViews.Example;
 
@@ -12,7 +13,7 @@ public partial class View2 : FreeTabViewItemT<string>
 
     protected override void _OnViewItemInitialize()
     {
-        base._OnViewItemInitialize();
+        ViewItemTweener = new FadeViewItemTweener();
         _button.Pressed += () =>
         {
             _pressCount++;
