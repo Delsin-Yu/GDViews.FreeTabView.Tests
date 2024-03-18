@@ -9,5 +9,6 @@
   
   <ItemGroup>
     <ProjectReference Include="..\GDViews.FreeTabView\GDViews.FreeTabView.csproj"/>
+<!--    <PackageReference Include="GDViews.FreeTabView" Version="*"/>-->
   </ItemGroup>
 </Project>

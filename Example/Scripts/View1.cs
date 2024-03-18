@@ -2,7 +2,7 @@ using Godot;
 
 namespace GodotViews.Example;
 
-public partial class View1 : FreeTabViewControl
+public partial class View1 : FreeTabViewItem
 {
     [Export] private Label _text;
 

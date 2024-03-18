@@ -2,7 +2,7 @@ using Godot;
 
 namespace GodotViews.Example;
 
-public partial class View2 : FreeTabViewControlT<string>
+public partial class View2 : FreeTabViewItemT<string>
 {
     [Export] private Label _text;
     [Export] private Button _button;
@@ -10,9 +10,9 @@ public partial class View2 : FreeTabViewControlT<string>
     private string _arg;
     private int _pressCount;
 
-    protected override void _OnViewInitialize()
+    protected override void _OnViewItemInitialize()
     {
-        base._OnViewInitialize();
+        base._OnViewItemInitialize();
         _button.Pressed += () =>
         {
             _pressCount++;
@@ -20,7 +20,7 @@ public partial class View2 : FreeTabViewControlT<string>
         };
     }
 
-    protected override void _OnViewShow(string optionalArg)
+    protected override void _OnViewItemShow(string optionalArg)
     {
         _arg = optionalArg;
         UpdateText();
