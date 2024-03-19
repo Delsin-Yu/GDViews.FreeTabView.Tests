@@ -1,4 +1,4 @@
-namespace GodotViews.Example.ReadmeExample.PrefabStyle;
+namespace GodotViews.Example.ReadmeExample.ReferenceStyle;
 
 using Godot;
 
@@ -39,6 +39,6 @@ public partial class Main_PrefabStyle : Node
     {
         // Developer may use their own preferred way to handle switching between tabs.
         if (Input.IsActionJustPressed("ui_left")) _tabView.ShowPrevious();
-        if (Input.IsActionJustPressed("ui_right")) _tabView.ShowPrevious();
+        if (Input.IsActionJustPressed("ui_right")) _tabView.ShowNext();
     }
 }
